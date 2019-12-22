@@ -13,6 +13,19 @@ namespace News.Web.Controllers
             return View();
         }
 
+        public ActionResult Slider()
+        {
+            return PartialView();
+        }
+        public ActionResult LastNews()
+        {
+            return PartialView();
+        }
+        public ActionResult TopNews()
+        {
+            return PartialView();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
