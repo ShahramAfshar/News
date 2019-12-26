@@ -10,18 +10,17 @@ using System.Threading.Tasks;
 namespace News.Data.Repositories
 {
      
-    public interface INewsRepository : IRepository<NewsModel>
+    public interface ICommentRepository : IRepository<Comment>
     {
-        //------Definition Private Functions Model -------------//
 
 
     }
 
-    public class NewsRepository : Repository<NewsModel>, INewsRepository
+    public class CommentRepository : Repository<Comment>, ICommentRepository
     {
 
         private readonly DbContext db;
-        public NewsRepository(DbContext dbContext) : base(dbContext)
+        public CommentRepository(DbContext dbContext) : base(dbContext)
         {
             this.db = (this.db ?? (MyDbContext)db);
         }

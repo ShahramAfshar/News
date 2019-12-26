@@ -1,0 +1,20 @@
+﻿@model IEnumerable<News.DomainModel.Tag>
+
+@if (Model.Any())
+{
+
+    <ul class="categories">
+
+        @foreach (var item in Model)
+        {
+            <li><a href="#">@item.Title</a></li>
+        }
+
+
+    </ul>
+
+
+
+}
+
+

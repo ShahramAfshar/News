@@ -1,30 +1,32 @@
-﻿
+﻿@model IEnumerable<News.DomainModel.NewsModel>
+
+
 <div class="life-style">
     <header>
         <h3 class="title-head">
             پربازدیدتری اخبار
         </h3>
     </header>
+
     <div class="life-style-grids">
-        <div class="life-style-right-grid">
-            <a href="single.html"><img src="/Template/images/l1.jpg" alt="" /></a>
-            <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-        </div>
-        <div class="life-style-left-grid">
-            <a href="single.html"><img src="/Template/images/l2.jpg" alt="" /></a>
-            <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-        </div>
+        @{
+            int i = 2;
+
+            foreach (var item in Model)
+            {
+                
+
+                <div class="@(i % 2 == 0 ? "life-style-right-grid":"life-style-left-grid")">
+
+                    <a href="single.html"><img src="~/Images/Pages/@item.ImageName" alt="" /></a>
+                    <a class="title" href="single.html">@item.Title</a>
+                </div>
+                i++;
+            }
+
+
+        }
         <div class="clearfix"></div>
     </div>
-    <div class="life-style-grids">
-        <div class="life-style-right-grid">
-            <a href="single.html"><img src="/Template/images/l3.jpg" alt="" /></a>
-            <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-        </div>
-        <div class="life-style-left-grid">
-            <a href="single.html"><img src="/Template/images/l4.jpg" alt="" /></a>
-            <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-        </div>
-        <div class="clearfix"></div>
+
     </div>
-</div>

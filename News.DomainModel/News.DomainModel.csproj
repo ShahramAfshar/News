@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\GroupNews.cs" />
     <Compile Include="Models\NewsModel.cs" />
     <Compile Include="Models\Tag.cs" />

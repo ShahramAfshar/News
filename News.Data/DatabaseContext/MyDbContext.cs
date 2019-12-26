@@ -25,5 +25,9 @@ namespace News.Data.DatabaseContext
         public System.Data.Entity.DbSet<News.DomainModel.GroupNews> GroupNews { get; set; }
 
         public System.Data.Entity.DbSet<News.DomainModel.NewsModel> NewsModels { get; set; }
+
+        public System.Data.Entity.DbSet<News.DomainModel.Tag> Tags { get; set; }
+        public System.Data.Entity.DbSet<News.DomainModel.Comment>  Comments { get; set; }
+
     }
 }

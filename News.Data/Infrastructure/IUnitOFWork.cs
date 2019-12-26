@@ -15,6 +15,7 @@ namespace News.Data
         TagRepository  TagRepository { get; }
         NewsRepository  NewsRepository { get; }
         GroupRepository  GroupRepository { get; }
+        CommentRepository CommentRepository { get; }
 
 
 

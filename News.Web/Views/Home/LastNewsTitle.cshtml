@@ -1,0 +1,14 @@
+﻿@model IEnumerable<string>
+
+    <div class="marquee">
+
+
+        @foreach (string item in Model)
+        {
+            <div class="marquee1"><a class="breaking" href="single.html">
+             @item
+                 </a></div>
+        }
+
+        <div class="clearfix"></div>
+    </div>

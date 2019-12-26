@@ -36,7 +36,7 @@
 @foreach (var item in Model) {
 <tr>
     <td>
-        <img src="/Images/Pages/@item.ImageName" alt="@item.Title" />
+        <img class=" imgThumb" src="/Images/Pages/@item.ImageName" alt="@item.Title" />
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.GroupNews.Title)

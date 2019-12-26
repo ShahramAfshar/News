@@ -13,7 +13,7 @@ namespace News.Data.Repositories
     public interface ITagRepository : IRepository<Tag>
     {
         //------Definition Private Functions Model -------------//
-        //  IEnumerable<new> Search(string q);
+         IEnumerable<Tag> SingleNews(int  newsId);
 
     }
 
@@ -26,10 +26,10 @@ namespace News.Data.Repositories
             this.db = (this.db ?? (MyDbContext)db);
         }
 
-        //public IEnumerable<Product> Search(string q)
-        //{
-        //    var Tags = GetAll().Where(t => t.Title == q).Select(t => t.Product).ToList();
-        //    return Tags;
-        //}
+        public IEnumerable<Tag> SingleNews(int newsId)
+        {
+         return  GetAll().Where(t => t.NewsId == newsId).ToList();
+        }
+
     }
 }

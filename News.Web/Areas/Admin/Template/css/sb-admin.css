@@ -21,6 +21,17 @@ body {
 
 /* ------------------------------- */
 
+.imgThumb{
+    max-height:100px !important;
+    max-width:100px !important;
+}
+
+.imgEdit {
+    max-height: 200px !important;
+    max-width: 200px !important;
+}
+
+
 #wrapper {
     width: 100%;
 }

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<News.DomainModel.Comment>
+
+
+    <div class="response">
+        <h4>نظرات کاربران</h4>
+
+        @if (Model.Any())
+        {
+
+
+            foreach (var item in Model)
+            {
+                if (item.ParentId == 0)
+                {
+                    <div style="border:dashed 1px brown; padding:1px" class="media response-info">
+                        <div class="media-right response-text-right">
+                            <a href="#">
+                                <img class="media-object" src="~/Template/images/c1.jpg" alt="" />
+                            </a>
+                            <h5><a href="#">@item.Name</a></h5>
+                        </div>
+                        <div class="media-body response-text-left">
+                            <p>@item.Text</p>
+                            <ul>
+                                <li>@item.CreateDate</li>
+                                <li><a class="btn btn-sm btn-default" onclick="ReplyComment(@item.CommentId)">پاسخ دادن</a></li>
+                            </ul>
+
+                            @if (Model.Any(c => c.ParentId == item.CommentId))
+                            {
+                                foreach (var itemSub in Model.Where(c => c.ParentId == item.CommentId))
+                                {
+                                    <div class="media response-info">
+                                        <div class="media-right response-text-right">
+                                            <a href="#">
+                                                <img class="media-object" src="~/Template/images/c2.jpg" alt="" />
+                                            </a>
+                                            <h5><a href="#">@itemSub.Name</a></h5>
+                                        </div>
+                                        <div class="media-body response-text-left">
+                                            <p>@itemSub.Text</p>
+                                            <ul>
+                                                <li>@item.CreateDate</li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                }
+
+                            }
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                }
+
+
+
+            }
+        }
+        else
+        {
+            <p>هیچ نظری برای این خبر ثبت نشده است</p>
+        }
+
+    </div>

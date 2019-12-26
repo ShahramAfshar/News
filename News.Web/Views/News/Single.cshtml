@@ -1,0 +1,48 @@
+﻿@model News.DomainModel.NewsModel
+
+
+@{
+    ViewBag.Title = "خبر";
+}
+
+
+<div class="blog-posts" >
+    <h3 class="post">@Model.Title</h3>
+    <div class="last-article">
+        <p class="artext">
+            @Model.ShortNews
+        </p>
+        <img src="/Images/Pages/@Model.ImageName" alt="@Model.Title" title="@Model.Title" />
+        <p class="artext">
+            @Model.FullNews
+        </p>
+
+        @Html.Action("GetTagNews", "News", new { id = Model.NewsId })
+
+        <div class="clearfix"></div>
+        <!--related-posts-->
+        @Html.Action("RelativeNews", "News", new { groupId = Model.GroupId })
+        <!--//related-posts-->
+        @Html.Action("CreateComment", "News", new { newsId = Model.NewsId, })
+
+        @Html.Action("ShowComment", "News", new { newsId = Model.NewsId })
+
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+
+    function ReplyComment(id)
+    {
+        $("#ParentId").val(id);
+        $("html, body").delay(2000).animate({ scrollTop: $('#commentNews').offset().top }, 2000);
+    }
+    </script>
+    
+    }
+
+
+

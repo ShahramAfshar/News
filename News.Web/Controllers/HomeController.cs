@@ -1,4 +1,6 @@
-﻿using System;
+﻿using News.Data;
+using News.Data.DatabaseContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,7 @@ namespace News.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private UnitOfWork<MyDbContext> db = new UnitOfWork<MyDbContext>();
         public ActionResult Index()
         {
             return View();
@@ -19,11 +22,18 @@ namespace News.Web.Controllers
         }
         public ActionResult LastNews()
         {
-            return PartialView();
+          var res=  db.NewsRepository.GetAll().OrderByDescending(n => n.NewsId).Take(5);
+            return PartialView(res);
+        }
+        public ActionResult LastNewsTitle()
+        {
+            var res = db.NewsRepository.GetAll().OrderByDescending(n => n.NewsId).Select(n=>n.Title).Take(5);
+            return PartialView(res);
         }
         public ActionResult TopNews()
         {
-            return PartialView();
+            var res = db.NewsRepository.GetAll().OrderByDescending(n => n.Visit).Take(4);
+            return PartialView(res);
         }
 
         public ActionResult About()

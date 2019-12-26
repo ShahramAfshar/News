@@ -1,0 +1,15 @@
+﻿@model IEnumerable<News.DomainModel.NewsModel>
+
+    <div class="row related-posts">
+        <h4>مقالات شما ممکن است مانند</h4>
+        @foreach (var item in Model)
+        {
+            <div class="col-xs-6 col-md-3 related-grids">
+                <a href="single.html" class="thumbnail">
+                    <img src="/Images/Pages/@item.ImageName" alt="@item.Title" title="@item.Title" />
+                </a>
+                <h5><a href="single.html">@item.Title</a></h5>
+            </div>
+        }
+
+    </div>

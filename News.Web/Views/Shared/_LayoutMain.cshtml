@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-    <title>مرجع تخصصی برنامه نویسان</title>
+    <title>@ViewBag.Title</title>
     <link href="/Template/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
@@ -184,15 +184,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     آخرین اخبار
                 </h2>
             </div>
-            <div class="marquee">
-                <div class="marquee1"><a class="breaking" href="single.html">>>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است..</a></div>
-                <div class="marquee2"><a class="breaking" href="single.html">>>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است..</a></div>
-                <div class="clearfix"></div>
-            </div>
+  @Html.Action("LastNewsTitle","Home")
             <div class="clearfix"></div>
             <script type="text/javascript" src="/Template/js/jquery.marquee.min.js"></script>
             <script>
-                $('.marquee').marquee({ pauseOnHover: true });
+                $('.marquee').marquee({ pauseOnHover: true ,direction: 'right',});
                 //sourceURL=pen.js
             </script>
         </div>
@@ -200,9 +196,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- content-section-starts-here -->
     <div class="main-body">
         <div class="wrap">
-            <div class="col-md-8 content-right">
-                @RenderBody()
-            </div>
+
             <div class="col-md-4 side-bar">
                 <div class="first_half">
                     <div class="newsletter">
@@ -476,93 +470,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
                 <div class="secound_half">
-                    <div class="tags">
-                        <header>
-                            <h3 class="title-head">برچسب ها</h3>
-                        </header>
-                        <p>
-                            <a class="tag1" href="single.html">
 
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag2" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag3" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag4" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag5" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag6" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag7" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag8" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag9" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag10" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag11" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag12" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag13" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag14" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag15" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag16" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag17" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag18" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag19" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag20" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                        </p>
-                    </div>
                     <div class="popular-news">
                         <header>
                             <h3 class="title-popular">اخبار</h3>
@@ -579,7 +487,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <p>On Mar 14, 2015 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>250 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>68</a></p>
                             </div>
                             <div class="popular-grid">
-                                <iframe width="100%" src="https://www.youtube.com/embed/LGMn_yi_62k" frameborder="0" allowfullscreen></iframe>
+                               
                                 <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
                                 <p>On Mar 14, 2015 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>250 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>68</a></p>
                             </div>
@@ -592,6 +500,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
                 <div class="clearfix"></div>
+            </div>
+
+            <div class="col-md-8 ">
+                @RenderBody()
             </div>
             <div class="clearfix"></div>
         </div>
@@ -727,5 +639,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
 
+    @RenderSection("Scripts",false)
 </body>
 </html>

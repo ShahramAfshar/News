@@ -47,6 +47,7 @@ namespace News.DomainModel
 
         public virtual GroupNews  GroupNews { get; set; }
         public virtual IEnumerable<Tag>  Tags { get; set; }
+        public virtual IEnumerable<Comment>  Comments { get; set; }
 
     }
 }
