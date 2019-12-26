@@ -1,0 +1,99 @@
+﻿@model IEnumerable<News.DomainModel.GroupNews>
+
+@{
+    ViewBag.Title = "فهرست گروه ها";
+    ViewBag.SectionTitle = "فهرست گروه ها";
+}
+
+
+<p>
+    <a class="btn btn-primary" onclick="create()">درج گروه</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <a class="btn btn-info" onclick="detail(@item.GroupId)">جزئیات</a>
+                <a class="btn btn-warning" onclick="edit(@item.GroupId)">ویرایش</a>
+                <a class="btn btn-danger" onclick="myDelete(@item.GroupId)">حذف</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="myModalBody" class="modal-body">
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--EndModal-->
+
+@section Scripts{
+    <script>
+        function create() {
+            $.get('/admin/GroupNews/Create/', function (res) {
+                $('#myModal').modal();
+                $('#myModalTitle').html('افزودن  گروه');
+                $('#myModalBody').html(res);
+            });
+        }
+
+
+
+        function detail(id) {
+            $.get('/admin/GroupNews/Details/' + id, function (res) {
+                $('#myModal').modal();
+                $('#myModalTitle').html('جزئیات  گروه');
+                $('#myModalBody').html(res);
+
+            });
+        }
+
+
+
+        function edit(id) {
+            $.get('/admin/GroupNews/Edit/' + id, function (res) {
+                $('#myModal').modal();
+                $('#myModalTitle').html('ویرایش  گروه');
+                $('#myModalBody').html(res);
+
+            });
+        }
+
+        function myDelete(id) {
+
+            $.get('/admin/GroupNews/Delete/' + id, function (res) {
+                $('#myModal').modal();
+                $('#myModalTitle').html('ویرایش  گروه');
+                $('#myModalBody').html(res);
+
+            });
+        }
+    </script>
+}

@@ -1,730 +1,336 @@
-﻿<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>
-    <title>مرجع تخصصی برنامه نویسان</title>
-    <link href="/Areas/Admin/Template/css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Custom Theme files -->
-    <link href="/Areas/Admin/Template/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- Custom Theme files -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Express News Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- for bootstrap working -->
-    <script type="text/javascript" src="/Areas/Admin/Template/js/bootstrap.js"></script>
-    <script src="/Areas/Admin/Template/js/jquery.min.js"></script>
-    <!-- //for bootstrap working -->
-    <!-- web-fonts -->
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="/Areas/Admin/Template/css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="/Areas/Admin/Template/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="/Areas/Admin/Template/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="/Areas/Admin/Template/css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="/Areas/Admin/Template/css/sb-admin.css" rel="stylesheet">
+    @RenderSection("Styles",false)
 </head>
+
 <body>
-    <!-- header-section-starts-here -->
-    <div class="header">
-        <div class="header-top">
-            <div class="wrap">
-                <div class="top-menu">
-                    <ul>
-                        <li><a href="index.html">صفحه اصلی</a></li>
-                        <li><a href="about.html">درباره ما</a></li>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">پنل ادمین</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-left">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
                         <li>
-                            <a href="privacy-policy.html">
-                                سیاست حفظ حریم خصوصی
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
                             </a>
                         </li>
-                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
                     </ul>
-                </div>
-                <div class="num">
-                    <p>
-                        با ما تماس بگیرید
-                        : 032 2352 782
-                    </p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <div class="logo text-center">
-                <a href="index.html"><img src="/Areas/Admin/Template/images/logo.jpg" alt="" /></a>
-            </div>
-            <div class="navigation">
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="wrap">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">
-                                    تبدیل ناوبری
-                                </span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-
-                        </div>
-                        <!--/.navbar-header-->
-
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html">صفحه اصلی</a></li>
-                                <li><a href="sports.html">ورزشی</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">سرگرمی<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="entertainment.html">فیلم</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="entertainment.html">فرهنگی</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="entertainment.html">مقالات</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="entertainment.html">هنری</a></li>
-                                        <li class="divider"></li>
-                                        <li>
-                                            <a href="entertainment.html">
-                                                یک لینک بیش از هم جدا
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="shortcodes.html">
-                                        بهداشت و درمان
-                                    </a>
-                                </li>
-                                <li><a href="fashion.html">مد</a></li>
-                                <li class="dropdown">
-                                    <a href="business.html" class="dropdown-toggle" data-toggle="dropdown">کسب و کار<b class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-column columns-2">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <ul class="multi-column-dropdown">
-                                                    <li><a href="business.html">عمل</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="business.html">بهره گرفت</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="business.html">بازار</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="business.html">بررسی</a></li>
-                                                    <li class="divider"></li>
-                                                    <li>
-                                                        <a href="shortcodes.html">
-                                                            کدهای کوتاه
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <ul class="multi-column-dropdown">
-                                                    <li><a href="business.html">ویژگی ها</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="entertainment.html">فیلم</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="sports.html">ورزشی</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="business.html">بررسی</a></li>
-                                                    <li class="divider"></li>
-                                                    <li>
-                                                        <a href="business.html">
-                                                            سهام
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
                                         </div>
-                                    </ul>
-                                </li>
-                                <li><a href="technology.html">تکنولوژی</a></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                            <div class="search">
-                                <!-- start search-->
-                                <div class="search-box">
-                                    <div id="sb-search" class="sb-search">
-                                        <form>
-                                            <input class="sb-search-input" placeholder="
-عبارت جستجو را وارد کنید...
-" type="search" name="search" id="search">
-                                            <input class="sb-search-submit" type="submit" value="">
-                                            <span class="sb-icon-search"> </span>
-                                        </form>
                                     </div>
                                 </div>
-                                <!-- search-scripts -->
-                                <script src="/Areas/Admin/Template/js/classie.js"></script>
-                                <script src="/Areas/Admin/Template/js/uisearch.js"></script>
-                                <script>
-                                    new UISearch(document.getElementById('sb-search'));
-                                </script>
-                                <!-- //search-scripts -->
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-left text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-left text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-left text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-left text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-left text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
                             </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <!--/.navbar-collapse-->
-                    <!--/.navbar-->
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> داشنبورد</a>
+                        </li>
+
+                        <li>
+                            <a href="/admin/groupNews"><i class="fa fa-dashboard fa-fw"></i> گروه ها</a>
+                        </li>
+                                                <li>
+                            <a href="/admin/NewsModels"><i class="fa fa-dashboard fa-fw"></i> اخبار </a>
+                        </li>
+                        @*   <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="flot.html">Flot Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="morris.html">Morris.js Charts</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+
+
+                        *@
+
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
             </div>
-            </nav>
-        </div>
-    </div>
-    <!-- header-section-ends-here -->
-    <div class="wrap">
-        <div class="move-text" dir=ltr>
-            <div class="breaking_news">
-                <h2>
-                    آخرین اخبار
-                </h2>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">@ViewBag.SectionTitle</h1>
+                </div>
+                <!-- /.col-lg-12 -->
             </div>
-            <div class="marquee">
-                <div class="marquee1"><a class="breaking" href="single.html">>>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است..</a></div>
-                <div class="marquee2"><a class="breaking" href="single.html">>>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است..</a></div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-            <script type="text/javascript" src="/Areas/Admin/Template/js/jquery.marquee.min.js"></script>
-            <script>
-                $('.marquee').marquee({ pauseOnHover: true });
-                //sourceURL=pen.js
-            </script>
-        </div>
-    </div>
-    <!-- content-section-starts-here -->
-    <div class="main-body">
-        <div class="wrap">
-            <div class="col-md-8 content-right">
+            <!-- /.row -->
+            <div class="row">
                 @RenderBody()
             </div>
-            <div class="col-md-4 side-bar">
-                <div class="first_half">
-                    <div class="newsletter">
-                        <h1 class="side-title-head">خبرنامه</h1>
-                        <p class="sign">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                        <form>
-                            <input type="text" class="text" value="ایمیل" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
-                            <input type="submit" value="submit">
-                        </form>
-                    </div>
-                    <div class="list_vertical">
-                        <section class="accordation_menu">
-                            <div>
-                                <input id="label-1" name="lida" type="radio" checked />
-                                <label for="label-1" id="item1">
-                                    <i class="ferme"> </i>
-                                    محبوب پست ها
-                                    <i class="icon-plus-sign i-left1"></i><i class="icon-minus-sign i-left2"></i>
-                                </label>
-                                <div class="content" id="a1">
-                                    <div class="scrollbar" id="style-2">
-                                        <div class="force-overflow">
-                                            <div class="popular-post-grids">
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/bus2.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Feb 25 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>3 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/bus1.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Apr 14 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>2 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/bus3.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Jun 25 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/bus4.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Jan 25 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>1 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <input id="label-2" name="lida" type="radio" />
-                                <label for="label-2" id="item2">
-                                    <i class="icon-leaf" id="i2"></i>
-                                    ارسال های اخیر
-                                    <i class="icon-plus-sign i-left1"></i><i class="icon-minus-sign i-left2"></i>
-                                </label>
-                                <div class="content" id="a2">
-                                    <div class="scrollbar" id="style-2">
-                                        <div class="force-overflow">
-                                            <div class="popular-post-grids">
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/tec2.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Feb 25 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>3 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/tec1.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Apr 14 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>2 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/tec3.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Jun 25 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="popular-post-grid">
-                                                    <div class="post-img">
-                                                        <a href="single.html"><img src="images/tec4.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div class="post-text">
-                                                        <a class="pp-title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
-                                                        <p>On Jan 25 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>1 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <input id="label-3" name="lida" type="radio" />
-                                <label for="label-3" id="item3"><i class="icon-trophy" id="i3"></i>نظرها<i class="icon-plus-sign i-left1"></i><i class="icon-minus-sign i-left2"></i></label>
-                                <div class="content" id="a3">
-                                    <div class="scrollbar" id="style-2">
-                                        <div class="force-overflow">
-                                            <div class="response">
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>MARCH 21, 2015</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>MARCH 26, 2015</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>MAY 25, 2015</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>FEB 13, 2015</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>JAN 28, 2015</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>APR 18, 2015</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                                <div class="media response-info">
-                                                    <div class="media-right response-text-right">
-                                                        <a href="#">
-                                                            <img class="media-object" src="images/icon1.png" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">نام</a></h5>
-                                                    </div>
-                                                    <div class="media-body response-text-left">
-                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                                        <ul>
-                                                            <li>DEC 25, 2014</li>
-                                                            <li><a href="single.html">پاسخ</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="side-bar-articles">
-                        <div class="side-bar-article">
-                            <a href="single.html"><img src="images/sai.jpg" alt="" /></a>
-                            <div class="side-bar-article-title">
-                                <a href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان </a>
-                            </div>
-                        </div>
-                        <div class="side-bar-article">
-                            <a href="single.html"><img src="images/sai2.jpg" alt="" /></a>
-                            <div class="side-bar-article-title">
-                                <a href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان </a>
-                            </div>
-                        </div>
-                        <div class="side-bar-article">
-                            <a href="single.html"><img src="images/sai3.jpg" alt="" /></a>
-                            <div class="side-bar-article-title">
-                                <a href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="secound_half">
-                    <div class="tags">
-                        <header>
-                            <h3 class="title-head">برچسب ها</h3>
-                        </header>
-                        <p>
-                            <a class="tag1" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag2" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag3" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag4" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag5" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag6" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag7" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag8" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag9" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag10" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag11" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag12" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag13" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag14" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag15" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag16" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag17" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag18" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag19" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                            <a class="tag20" href="single.html">
-
-                                لورم ایپسوم
-                            </a>
-                        </p>
-                    </div>
-                    <div class="popular-news">
-                        <header>
-                            <h3 class="title-popular">اخبار</h3>
-                        </header>
-                        <div class="popular-grids">
-                            <div class="popular-grid">
-                                <a href="single.html"><img src="images/popular-4.jpg" alt="" /></a>
-                                <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-                                <p>On Aug 31, 2015 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>250 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>68</a></p>
-                            </div>
-                            <div class="popular-grid">
-                                <a href="single.html"><img src="images/popular-1.jpg" alt="" /></a>
-                                <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-                                <p>On Mar 14, 2015 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>250 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>68</a></p>
-                            </div>
-                            <div class="popular-grid">
-                                <iframe width="100%" src="https://www.youtube.com/embed/LGMn_yi_62k" frameborder="0" allowfullscreen></iframe>
-                                <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-                                <p>On Mar 14, 2015 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>250 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>68</a></p>
-                            </div>
-                            <div class="popular-grid">
-                                <a href="single.html"><img src="images/popular-3.jpg" alt="" /></a>
-                                <a class="title" href="single.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</a>
-                                <p>On Mar 14, 2015 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>250 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>68</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
+            <!-- /.row -->
         </div>
+        <!-- /#page-wrapper -->
+
     </div>
-    <!-- content-section-ends-here -->
-    <!-- footer-section-starts-here -->
-    <div class="footer">
-        <div class="footer-top">
-            <div class="wrap">
-                <div class="col-md-3 col-xs-6 col-sm-4 footer-grid">
-                    <h4 class="footer-head">درباره ما</h4>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                </div>
-                <div class="col-md-2 col-xs-6 col-sm-2 footer-grid">
-                    <h4 class="footer-head">دسته بندی</h4>
-                    <ul class="cat">
-                        <li><a href="business.html">تجارت</a></li>
-                        <li><a href="technology.html">تکنولوژی</a></li>
-                        <li><a href="entertainment.html">سرگرمی</a></li>
-                        <li><a href="sports.html">ورزشی</a></li>
-                        <li>
-                            <a href="shortcodes.html">
-                                بهداشت و درمان
-                            </a>
-                        </li>
-                        <li><a href="fashion.html">مد</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-xs-6 col-sm-6 footer-grid">
-                    <h4 class="footer-head">
+    <!-- /#wrapper -->
+    <!-- Core Scripts - Include with every page -->
+    <script src="/Areas/Admin/Template/js/jquery-1.10.2.js"></script>
+    <script src="/Areas/Admin/Template/js/bootstrap.min.js"></script>
+    <script src="/Areas/Admin/Template/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
-                        لورم ایپسوم
-                    </h4>
-                    <ul class="flickr">
-                        <li><a href="#"><img src="images/bus4.jpg"></a></li>
-                        <li><a href="#"><img src="images/bus2.jpg"></a></li>
-                        <li><a href="#"><img src="images/bus3.jpg"></a></li>
-                        <li><a href="#"><img src="images/tec4.jpg"></a></li>
-                        <li><a href="#"><img src="images/tec2.jpg"></a></li>
-                        <li><a href="#"><img src="images/tec3.jpg"></a></li>
-                        <li><a href="#"><img src="images/bus2.jpg"></a></li>
-                        <li><a href="#"><img src="images/bus3.jpg"></a></li>
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-xs-12 footer-grid">
-                    <h4 class="footer-head">تماس با ما</h4>
-                    <span class="hq">
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="/Areas/Admin/Template/js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="/Areas/Admin/Template/js/plugins/morris/morris.js"></script>
 
-                        لورم ایپسوم یا طرح‌نما
-                    </span>
-                    <address>
-                        <ul class="location">
-                            <li><span class="glyphicon glyphicon-map-marker"></span></li>
-                            <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <ul class="location">
-                            <li><span class="glyphicon glyphicon-earphone"></span></li>
-                            <li>+0 561 111 235</li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <ul class="location">
-                            <li><span class="glyphicon glyphicon-envelope"></span></li>
-                            <li><a href="">info@barnamenevisan.org</a></li>
-                            <div class="clearfix"></div>
-                        </ul>
-                    </address>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="wrap">
-                <div class="copylefts col-md-6">
-                    <p>
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="/Areas/Admin/Template/js/sb-admin.js"></script>
 
-                        کپی رایت@2015 تمام حقوق مادی و معنوی این سایت متعلق به گروه برنامه نویسان میباشد
-                        <a href="http://www.barnamenevisan.org">برنامه نویسان آینده ساز</a>
-                    </p>
-                </div>
-                <div class="footer-social-icons col-md-6">
-                    <ul>
-                        <li><a class="facebook" href="#"></a></li>
-                        <li><a class="twitter" href="#"></a></li>
-                        <li><a class="flickr" href="#"></a></li>
-                        <li><a class="googleplus" href="#"></a></li>
-                        <li><a class="dribbble" href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!-- footer-section-ends-here -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /*
-            var defaults = {
-            wrapID: 'toTop', // fading element id
-            wrapHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-            };
-            */
-            $().UItoTop({ easingType: 'easeOutQuart' });
-        });
-    </script>
-    <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-    <!---->
-    <script src="/Areas/Admin/Template/js/responsiveslides.min.js"></script>
-    <script type="text/javascript" src="/Areas/Admin/Template/js/move-top.js"></script>
-    <script type="text/javascript" src="/Areas/Admin/Template/js/easing.js"></script>
-    <!--/script-->
-    <script type="text/javascript">
-
-                $(function () {
-            $("#slider").responsiveSlides({
-                auto: true,
-                nav: true,
-                speed: 500,
-                namespace: "callbacks",
-                pager: true,
-            });
-        });
-
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
-            });
-        });
-    </script>
-
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="/Areas/Admin/Template/js/demo/dashboard-demo.js"></script>
+    @RenderSection("Scripts", false)
 </body>
+
 </html>

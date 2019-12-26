@@ -1,0 +1,82 @@
+﻿@model News.DomainModel.NewsModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NewsModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupNews.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupNews.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortNews)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortNews)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNews)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNews)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsShowSlider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsShowSlider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NewsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

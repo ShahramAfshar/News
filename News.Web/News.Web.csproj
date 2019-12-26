@@ -168,7 +168,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\GroupNewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsModelsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -182,6 +184,48 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Template\blank.html" />
+    <Content Include="Areas\Admin\Template\buttons.html" />
+    <Content Include="Areas\Admin\Template\css\bootstrap-rtl.css" />
+    <Content Include="Areas\Admin\Template\css\bootstrap.css" />
+    <Content Include="Areas\Admin\Template\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Template\css\plugins\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Areas\Admin\Template\css\plugins\morris\morris-0.4.3.min.css" />
+    <Content Include="Areas\Admin\Template\css\plugins\social-buttons\social-buttons.css" />
+    <Content Include="Areas\Admin\Template\css\plugins\timeline\timeline.css" />
+    <Content Include="Areas\Admin\Template\css\sb-admin.css" />
+    <Content Include="Areas\Admin\Template\flot.html" />
+    <Content Include="Areas\Admin\Template\font-awesome\css\font-awesome.css" />
+    <Content Include="Areas\Admin\Template\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\Template\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\Template\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\Template\forms.html" />
+    <Content Include="Areas\Admin\Template\grid.html" />
+    <Content Include="Areas\Admin\Template\index.html" />
+    <Content Include="Areas\Admin\Template\js\bootstrap.js" />
+    <Content Include="Areas\Admin\Template\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Template\js\demo\dashboard-demo.js" />
+    <Content Include="Areas\Admin\Template\js\demo\flot-demo.js" />
+    <Content Include="Areas\Admin\Template\js\demo\morris-demo.js" />
+    <Content Include="Areas\Admin\Template\js\jquery-1.10.2.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\morris\morris.js" />
+    <Content Include="Areas\Admin\Template\js\plugins\morris\raphael-2.1.0.min.js" />
+    <Content Include="Areas\Admin\Template\js\sb-admin.js" />
+    <Content Include="Areas\Admin\Template\login.html" />
+    <Content Include="Areas\Admin\Template\morris.html" />
+    <Content Include="Areas\Admin\Template\notifications.html" />
+    <Content Include="Areas\Admin\Template\panels-wells.html" />
+    <Content Include="Areas\Admin\Template\tables.html" />
+    <Content Include="Areas\Admin\Template\typography.html" />
+    <Content Include="Images\Pages\NoImages.jpg" />
     <Content Include="Template\about.html" />
     <Content Include="Template\business.html" />
     <Content Include="Template\contact.html" />
@@ -321,6 +365,51 @@
     <Content Include="Template\fonts\yekan.ttf" />
     <Content Include="Template\fonts\yekan.woff" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Template\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\Template\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\Template\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\Template\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\core.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\fixed-width.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\font-awesome.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\icons.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\larger.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\list.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\mixins.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\path.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\spinning.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\stacked.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\less\variables.less" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_core.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_icons.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_larger.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_list.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_mixins.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_path.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_spinning.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_stacked.scss" />
+    <Content Include="Areas\Admin\Template\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\Template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\Template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupNews\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupNews\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupNews\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupNews\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupNews\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsModels\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsModels\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsModels\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsModels\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsModels\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -374,7 +463,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -388,6 +476,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\News.Data\News.Data.csproj">
+      <Project>{dc85fa9e-f1dd-4d37-9343-21c653dea57e}</Project>
+      <Name>News.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\News.DomainModel\News.DomainModel.csproj">
+      <Project>{03d2ab00-d0cf-44f6-9aca-28431eec3f06}</Project>
+      <Name>News.DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

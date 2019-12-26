@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using News.Data.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Text;
@@ -39,19 +41,48 @@ namespace News.Data
 
         #region Repositories
 
-        //private TagRepository tagRepository;
-        //public TagRepository TagRepository
-        //{
-        //    get
-        //    {
-        //        if (tagRepository == null)
-        //        {
-        //            tagRepository = new TagRepository(db);
-        //        }
+        private TagRepository tagRepository;
+        public TagRepository TagRepository
+        {
+            get
+            {
+                if (tagRepository == null)
+                {
+                    tagRepository = new TagRepository(db);
+                }
 
-        //        return tagRepository;
-        //    }
-        //}
+                return tagRepository;
+            }
+        }
+
+        private GroupRepository groupRepository;
+        public GroupRepository GroupRepository
+        {
+            get
+            {
+                if (groupRepository == null)
+                {
+                    groupRepository = new GroupRepository(db);
+                }
+
+                return groupRepository;
+            }
+        }
+
+        private NewsRepository newsRepository;
+        public NewsRepository NewsRepository
+        {
+            get
+            {
+                if (newsRepository == null)
+                {
+                    newsRepository = new NewsRepository(db);
+                }
+
+                return newsRepository;
+            }
+        }
+
 
 
         #endregion
