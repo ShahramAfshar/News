@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +37,10 @@ namespace News.DomainModel
 
         [Display(Name = "نمایش در اسلایدر")]
         public bool IsShowSlider { get; set; }
+
         public string ImageName { get; set; }
         [DisplayFormat(DataFormatString ="{0:yyy/MM/dd}")]
+        [Column(TypeName = "datetime2")]
         public DateTime CreateDate { get; set; }
 
         [Display(Name = "تعداد بازدید")]

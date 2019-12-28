@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,12 @@ namespace News.DomainModel
 
         [Display(Name = "تاریخ شروع")]
         [Required(ErrorMessage = " فیلد{0} نمی تواند خالی باشد")]
+        [Column(TypeName = "datetime2")]
         public DateTime StartDate { get; set; }
 
         [Display(Name = "تاریخ پایان")]
         [Required(ErrorMessage = " فیلد{0} نمی تواند خالی باشد")]
+        [Column(TypeName = "datetime2")]
         public DateTime EndDate { get; set; }
 
         [Display(Name = "عنوان")]

@@ -37,7 +37,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.StartDate)
                 @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.EndDate)
                 @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -73,7 +73,6 @@
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("برگشت به لیست", "Index")
 </div>
@@ -81,6 +80,20 @@
 
 @section Scripts
 {
+    <script type="text/javascript" src="/Plugin/PersianDataPicker/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/Plugin/PersianDataPicker/js/persianDatepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#StartDate").persianDatepicker({
+                formatDate: "YYYY/0M/0D ",
+            });
+
+            $("#EndDate").persianDatepicker({
+                formatDate: "YYYY/0M/0D ",
+            });
+        });
+    </script>
+
     <script>
         function readURL(input) {
 
@@ -100,4 +113,9 @@
         });
     </script>
 
+}
+
+
+@section Styles{
+    <link type="text/css" rel="stylesheet" href="/Plugin/PersianDataPicker/css/persianDatepicker-default.css" />
 }
