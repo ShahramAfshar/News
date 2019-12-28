@@ -27,7 +27,7 @@ namespace News.Web.Controllers
         }
         public ActionResult LastNewsTitle()
         {
-            var res = db.NewsRepository.GetAll().OrderByDescending(n => n.NewsId).Select(n=>n.Title).Take(5);
+            var res = db.NewsRepository.GetAll().OrderByDescending(n => n.NewsId).Take(5);
             return PartialView(res);
         }
         public ActionResult TopNews()

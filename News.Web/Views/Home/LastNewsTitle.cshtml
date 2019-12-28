@@ -1,12 +1,12 @@
-﻿@model IEnumerable<string>
+﻿@model IEnumerable<News.DomainModel.NewsModel>
 
     <div class="marquee">
 
 
-        @foreach (string item in Model)
+        @foreach (var item in Model)
         {
-            <div class="marquee1"><a class="breaking" href="single.html">
-             @item
+            <div class="marquee1"><a class="breaking" href="/News/Single/@item.NewsId">
+             @item.Title
                  </a></div>
         }
 

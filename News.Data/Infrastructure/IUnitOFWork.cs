@@ -14,7 +14,8 @@ namespace News.Data
         //1-Begin TransAction  2-Commit(SaveChange) 3-RollBack
         TagRepository  TagRepository { get; }
         NewsRepository  NewsRepository { get; }
-        GroupRepository  GroupRepository { get; }
+        GroupRepository GroupRepository { get; }
+        SliderRepository   SliderRepository { get; }
         CommentRepository CommentRepository { get; }
 
 

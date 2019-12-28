@@ -18,8 +18,8 @@
 
                 <div class="@(i % 2 == 0 ? "life-style-right-grid":"life-style-left-grid")">
 
-                    <a href="single.html"><img src="~/Images/Pages/@item.ImageName" alt="" /></a>
-                    <a class="title" href="single.html">@item.Title</a>
+                    <a href="/News/Single/@item.NewsId"><img src="~/Images/Pages/@item.ImageName" alt="" /></a>
+                    <a class="title" href="/News/Single/@item.NewsId">@item.Title</a>
                 </div>
                 i++;
             }

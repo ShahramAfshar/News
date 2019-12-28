@@ -83,6 +83,20 @@ namespace News.Data
             }
         }
 
+        private SliderRepository sliderRepository;
+        public SliderRepository SliderRepository
+        {
+            get
+            {
+                if (sliderRepository == null)
+                {
+                    sliderRepository = new SliderRepository(db);
+                }
+
+                return sliderRepository;
+            }
+        }
+
         private CommentRepository commentRepository;
         public CommentRepository CommentRepository
         {

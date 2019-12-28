@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using News.Data;
 using News.Data.DatabaseContext;
 using News.DomainModel;
 
@@ -13,12 +14,13 @@ namespace News.Web.Areas.Admin.Controllers
 {
     public class CommentsController : Controller
     {
-        private MyDbContext db = new MyDbContext();
+        private UnitOfWork<MyDbContext> db = new UnitOfWork<MyDbContext>();
 
         // GET: Admin/Comments
         public ActionResult Index()
         {
-            var comments = db.Comments.Include(c => c.NewsModel);
+            // var comments = db.Comments.Include(c => c.NewsModel);
+             var comments = db.CommentRepository.GetAll();
             return View(comments.ToList());
         }
 
@@ -29,7 +31,7 @@ namespace News.Web.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Comment comment = db.Comments.Find(id);
+            Comment comment = db.CommentRepository.GetById(id.Value);
             if (comment == null)
             {
                 return HttpNotFound();
@@ -40,7 +42,7 @@ namespace News.Web.Areas.Admin.Controllers
         // GET: Admin/Comments/Create
         public ActionResult Create()
         {
-            ViewBag.NewsId = new SelectList(db.NewsModels, "NewsId", "Title");
+            ViewBag.NewsId = new SelectList(db.NewsRepository.GetAll(), "NewsId", "Title");
             return View();
         }
 
@@ -53,12 +55,12 @@ namespace News.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Comments.Add(comment);
-                db.SaveChanges();
+                db.CommentRepository.Insert(comment);
+                db.Commit();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.NewsId = new SelectList(db.NewsModels, "NewsId", "Title", comment.NewsId);
+            ViewBag.NewsId = new SelectList(db.NewsRepository.GetAll(), "NewsId", "Title", comment.NewsId);
             return View(comment);
         }
 
@@ -69,12 +71,12 @@ namespace News.Web.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Comment comment = db.Comments.Find(id);
+            Comment comment = db.CommentRepository.GetById(id.Value);
             if (comment == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.NewsId = new SelectList(db.NewsModels, "NewsId", "Title", comment.NewsId);
+            ViewBag.NewsId = new SelectList(db.NewsRepository.GetAll(), "NewsId", "Title", comment.NewsId);
             return View(comment);
         }
 
@@ -87,11 +89,11 @@ namespace News.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(comment).State = EntityState.Modified;
-                db.SaveChanges();
+                db.CommentRepository.Update(comment);
+                db.Commit();
                 return RedirectToAction("Index");
             }
-            ViewBag.NewsId = new SelectList(db.NewsModels, "NewsId", "Title", comment.NewsId);
+            ViewBag.NewsId = new SelectList(db.NewsRepository.GetAll(), "NewsId", "Title", comment.NewsId);
             return View(comment);
         }
 
@@ -102,7 +104,7 @@ namespace News.Web.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Comment comment = db.Comments.Find(id);
+            Comment comment = db.CommentRepository.GetById(id.Value);
             if (comment == null)
             {
                 return HttpNotFound();
@@ -115,9 +117,10 @@ namespace News.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Comment comment = db.Comments.Find(id);
-            db.Comments.Remove(comment);
-            db.SaveChanges();
+            Comment comment = db.CommentRepository.GetById(id);
+            db.CommentRepository.Delete(comment);
+            db.Commit();
+
             return RedirectToAction("Index");
         }
 

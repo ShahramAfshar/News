@@ -18,7 +18,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="/Areas/Admin/Template/css/sb-admin.css" rel="stylesheet">
-    @RenderSection("Styles",false)
+    @RenderSection("Styles", false)
 </head>
 
 <body>
@@ -34,6 +34,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">پنل ادمین</a>
+                <a href="/">صفحه اصلی سایت</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -271,21 +272,24 @@
                         <li>
                             <a href="/admin/groupNews"><i class="fa fa-dashboard fa-fw"></i> گروه ها</a>
                         </li>
-                                                <li>
+                        <li>
                             <a href="/admin/NewsModels"><i class="fa fa-dashboard fa-fw"></i> اخبار </a>
                         </li>
+                        <li>
+                            <a href="/admin/Comments"><i class="fa fa-dashboard fa-fw"></i> نظرات کاربران </a>
+                        </li>
                         @*   <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="flot.html">Flot Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="morris.html">Morris.js Charts</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="flot.html">Flot Charts</a>
+                </li>
+                <li>
+                    <a href="morris.html">Morris.js Charts</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        </li>
 
 
 

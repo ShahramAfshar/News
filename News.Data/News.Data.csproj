@@ -67,6 +67,7 @@
     <Compile Include="Repositories\CommentRepository.cs" />
     <Compile Include="Repositories\GroupRepository.cs" />
     <Compile Include="Repositories\NewsRepository.cs" />
+    <Compile Include="Repositories\SliderRepository.cs" />
     <Compile Include="Repositories\TagRepository.cs" />
   </ItemGroup>
   <ItemGroup>
