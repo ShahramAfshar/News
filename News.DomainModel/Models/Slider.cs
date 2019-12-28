@@ -12,6 +12,9 @@ namespace News.DomainModel
         [Key]
         public int SliderId { get; set; }
 
+        [Display(Name = "نام عکس")]
+        public string ImageName { get; set; }
+
         [Display(Name = "نمایش")]
         public bool IsShow { get; set; }
 

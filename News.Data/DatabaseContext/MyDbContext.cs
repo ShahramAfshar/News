@@ -29,5 +29,6 @@ namespace News.Data.DatabaseContext
         public System.Data.Entity.DbSet<News.DomainModel.Tag> Tags { get; set; }
         public System.Data.Entity.DbSet<News.DomainModel.Comment>  Comments { get; set; }
 
+        public System.Data.Entity.DbSet<News.DomainModel.Slider> Sliders { get; set; }
     }
 }
